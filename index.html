@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JS Music Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="player">
+    <div class="now-playing">
+      <img id="cover" src="cover-placeholder.png" alt="cover" />
+      <div class="track-info">
+        <div id="title" class="title">Title</div>
+        <div id="artist" class="artist">Artist</div>
+      </div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <div class="controls-top">
+      <button id="prev" class="control">⏮</button>
+      <button id="play" class="control">▶</button>
+      <button id="next" class="control">⏭</button>
+    </div>
+
+    <div class="progress-container" id="progressContainer">
+      <div id="progress" class="progress"></div>
+    </div>
+    <div class="time-row">
+      <span id="currentTime">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="extras">
+      <label class="volume">
+        🔊
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+      </label>
+
+      <label class="autoplay">
+        Autoplay
+        <input id="autoplay" type="checkbox">
+      </label>
+    </div>
+
+    <div class="playlist" id="playlistContainer">
+      <!-- playlist items inserted via JS -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
